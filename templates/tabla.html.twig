@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title> Tabla </title>
+    <style>
+        th, td {
+            border: 1px solid;
+            padding: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th> DNI </th>
+            <th> Nombre </th>
+        </tr>
+        {%for fila in filas %}
+            <tr>
+                <td>{{ fila.dni }}</td>
+                <td>{{ fila.nombre }}</td>
+            </tr>
+        {% endfor %}
+        <a href="{{ path('holaNombre', {'nombre': 'Pedro'}) }}"> Enlace </a>
+    </table> 
+</body>
+</html>
